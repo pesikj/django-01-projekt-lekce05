@@ -26,6 +26,8 @@ class Company(models.Model):
     identification_number = models.CharField(max_length=100)
     address = models.ForeignKey(Address, on_delete=models.SET_NULL, null=True, blank=True)
 
+    def __str__(self):
+        return self.name
 
 class Contact(models.Model):
     primary_company = models.ForeignKey(Company, on_delete=models.SET_NULL, null=True)

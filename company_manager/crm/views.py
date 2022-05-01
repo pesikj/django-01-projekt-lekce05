@@ -24,7 +24,7 @@ class CompanyListView(LoginRequiredMixin, ListView):
 
 class OpportunityListView(LoginRequiredMixin, ListView):
     model = models.Opportunity
-    template_name = "company/list_opportunity.html"
+    template_name = "opportunity/list_opportunity.html"
 
 class OpportunityCreateView(PermissionRequiredMixin, SuccessMessageMixin, CreateView):
     permission_required = 'crm.add_opportunity'
